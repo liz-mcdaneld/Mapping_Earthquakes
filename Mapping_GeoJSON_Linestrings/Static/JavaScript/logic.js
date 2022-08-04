@@ -99,9 +99,9 @@ L.control.layers(baseMaps).addTo(map);
 // // Then we add our 'graymap' tile layer to the map.
 // streets.addTo(map);
 
-// Accessing the airport GeoJSON URL
-// let airportData = "https://raw.githubusercontent.com/<GitHub_name>/Mapping_Earthquakes/main/majorAirports.json";
-let airportData = "https://raw.githubusercontent.com/liz-mcdaneld/Mapping_Earthquakes/main/majorAirports.json";
+// Accessing the torontoHoods GeoJSON URL
+// let torontoHoods = "https://raw.githubusercontent.com/<GitHub_name>/Mapping_Earthquakes/main/torontoNeighborhoods.json";
+let torontoHoods = "https://raw.githubusercontent.com/liz-mcdaneld/Mapping_Earthquakes/main/torontoNeighborhoods.json";
 
 // Mapping_GeoJSON_Polygons
 
