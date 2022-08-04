@@ -103,6 +103,10 @@ L.control.layers(baseMaps).addTo(map);
 // let airportData = "https://raw.githubusercontent.com/<GitHub_name>/Mapping_Earthquakes/main/majorAirports.json";
 let airportData = "https://raw.githubusercontent.com/liz-mcdaneld/Mapping_Earthquakes/main/majorAirports.json";
 
+// Mapping_GeoJSON_Polygons
+
+// main
+
 // // Grabbing our GeoJSON data.
 // d3.json(torontoHoods).then(function(data) {
 //   console.log(data);
