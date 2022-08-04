@@ -37,6 +37,12 @@ console.log("working");
 
 // }).addTo(map);
 
+let line = [
+  [33.9416,-118.4085],
+  [37.6213, -122.3790],
+  [40.7899, -111.9791],
+[47.4502, -122.3088]
+];
 
 // We create the tile layer that will be the background of our map.
 let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -103,9 +109,6 @@ L.control.layers(baseMaps).addTo(map);
 // let airportData = "https://raw.githubusercontent.com/<GitHub_name>/Mapping_Earthquakes/main/majorAirports.json";
 let airportData = "https://raw.githubusercontent.com/liz-mcdaneld/Mapping_Earthquakes/main/majorAirports.json";
 
-// Mapping_GeoJSON_Polygons
-
-// main
 
 // // Grabbing our GeoJSON data.
 // d3.json(torontoHoods).then(function(data) {
@@ -122,16 +125,18 @@ let airportData = "https://raw.githubusercontent.com/liz-mcdaneld/Mapping_Earthq
 
 // Create a style for the lines.
 let myStyle = {
-  color: "#ffffa1",
-  weight: 2
+  color: "blue",
+  weight: 1
 }
 
 // Grabbing our GeoJSON data.
 d3.json(torontoHoods).then(function(data) {
+  console.log(data);
+// Creating a GeoJSON layer with the retrieved data.
 L.geoJson(data,{
   style : myStyle,
   onEachFeature : function(feature,layer) {
-layer.bindPopup("<h3> Airline : "+ feature.properties.airline + "</h3> <hr> <h3> Destination:" +feature.properties.dst +"</h3>");
+layer.bindPopup("<h3> Area Name: "+ feature.properties.AREA_NAME + "</h3> <hr> <h3> Area ID: " +feature.properties.AREA_S_CD +"</h3>");
 }
 }).addTo(map);
 });
